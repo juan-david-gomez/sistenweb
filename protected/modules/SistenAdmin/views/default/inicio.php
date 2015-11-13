@@ -39,4 +39,7 @@
 				<a href="<?php echo Yii::app()->createUrl('SistenAdmin/Usuario/admin');?>" class="quick-button metro red span2">
 					<i class="icon-user"></i><p class="hidden-tablet"> Usuarios</p>
 				</a>
+				<a href="<?php echo Yii::app()->createUrl('SistenAdmin/publicacion/admin');?>" class="quick-button metro red span2">
+					<i class="icon-shopping-cart"></i><p class="hidden-tablet"> Publicaciones</p>
+				</a>
 			</div><!--/row-->
