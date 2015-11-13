@@ -91,6 +91,7 @@
 						<li><a href="<?php echo Yii::app()->createUrl('SistenAdmin/proveedor/admin');?>"><i class="icon-group"></i><span class="hidden-tablet"> Proveedores</span></a></li>
 						<li><a href="<?php echo Yii::app()->createUrl('SistenAdmin/compra/admin');?>"><i class="icon-shopping-cart"></i><span class="hidden-tablet"> Compras</span></a></li>
 						<li><a href="<?php echo Yii::app()->createUrl('SistenAdmin/Usuario/admin');?>"><i class="icon-user"></i><span class="hidden-tablet"> Usuarios</span></a></li>
+						<li><a href="<?php echo Yii::app()->createUrl('SistenAdmin/publicacion/admin');?>"><i class="icon-shopping-cart"></i><span class="hidden-tablet"> Publicaciones</span></a></li>
 						<!-- <li><a href="widgets.html"><i class="icon-dashboard"></i><span class="hidden-tablet"> Widgets</span></a></li>
 						<li>
 							<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Dropdown</span><span class="label label-important"> 3 </span></a>

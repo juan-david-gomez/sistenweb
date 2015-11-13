@@ -16,8 +16,8 @@
  * @property integer $cantidad
  * @property double $valor_total
  *
- * @property Compra $idCompra
  * @property Producto $idProducto
+ * @property Compra $idCompra
  */
 abstract class BaseDetalleCompra extends AweActiveRecord {
 
@@ -35,7 +35,7 @@ abstract class BaseDetalleCompra extends AweActiveRecord {
 
     public function rules() {
         return array(
-            // array('id_detalle', 'required'),
+            array('id_detalle', 'required'),
             array('id_detalle, id_compra, id_producto, cantidad', 'numerical', 'integerOnly'=>true),
             array('valor_unidad, valor_total', 'numerical'),
             array('id_compra, id_producto, valor_unidad, cantidad, valor_total', 'default', 'setOnEmpty' => true, 'value' => null),
@@ -45,8 +45,8 @@ abstract class BaseDetalleCompra extends AweActiveRecord {
 
     public function relations() {
         return array(
-            'idCompra' => array(self::BELONGS_TO, 'Compra', 'id_compra'),
             'idProducto' => array(self::BELONGS_TO, 'Producto', 'id_producto'),
+            'idCompra' => array(self::BELONGS_TO, 'Compra', 'id_compra'),
         );
     }
 
@@ -61,8 +61,8 @@ abstract class BaseDetalleCompra extends AweActiveRecord {
                 'valor_unidad' => Yii::t('app', 'Valor Unidad'),
                 'cantidad' => Yii::t('app', 'Cantidad'),
                 'valor_total' => Yii::t('app', 'Valor Total'),
-                'idCompra' => null,
                 'idProducto' => null,
+                'idCompra' => null,
         );
     }
 
