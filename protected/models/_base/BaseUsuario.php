@@ -16,6 +16,7 @@
  * @property string $email_usuario
  * @property string $nombre_tienda
  * @property string $informacion_tienda
+ * @property integer $tipo_usuario
  *
  * @property Compra[] $compras
  */
@@ -35,12 +36,12 @@ abstract class BaseUsuario extends AweActiveRecord {
 
     public function rules() {
         return array(
-            array('nombre_usuario, username_usuario, clave_usuario', 'required'),
+            array('id_usuario, nombre_usuario, username_usuario, clave_usuario', 'required'),
+            array('id_usuario, tipo_usuario', 'numerical', 'integerOnly'=>true),
             array('nombre_usuario, username_usuario, clave_usuario, email_usuario', 'length', 'max'=>50),
-            array('nombre_tienda', 'length', 'max'=>255),
-            array('informacion_tienda', 'safe'),
-            array('email_usuario, nombre_tienda, informacion_tienda', 'default', 'setOnEmpty' => true, 'value' => null),
-            array('id_usuario, nombre_usuario, username_usuario, clave_usuario, email_usuario, nombre_tienda, informacion_tienda', 'safe', 'on'=>'search'),
+            array('nombre_tienda, informacion_tienda', 'length', 'max'=>255),
+            array('email_usuario, nombre_tienda, informacion_tienda, tipo_usuario', 'default', 'setOnEmpty' => true, 'value' => null),
+            array('id_usuario, nombre_usuario, username_usuario, clave_usuario, email_usuario, nombre_tienda, informacion_tienda, tipo_usuario', 'safe', 'on'=>'search'),
         );
     }
 
@@ -62,6 +63,7 @@ abstract class BaseUsuario extends AweActiveRecord {
                 'email_usuario' => Yii::t('app', 'Email Usuario'),
                 'nombre_tienda' => Yii::t('app', 'Nombre Tienda'),
                 'informacion_tienda' => Yii::t('app', 'Informacion Tienda'),
+                'tipo_usuario' => Yii::t('app', 'Tipo Usuario'),
                 'compras' => null,
         );
     }
@@ -76,6 +78,7 @@ abstract class BaseUsuario extends AweActiveRecord {
         $criteria->compare('email_usuario', $this->email_usuario, true);
         $criteria->compare('nombre_tienda', $this->nombre_tienda, true);
         $criteria->compare('informacion_tienda', $this->informacion_tienda, true);
+        $criteria->compare('tipo_usuario', $this->tipo_usuario);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,

@@ -33,7 +33,7 @@ abstract class BaseProveedor extends AweActiveRecord {
 
     public function rules() {
         return array(
-            array('nombre_proveedor,telefono,email,empresa_proveedor', 'required'),
+            array('id_proveedor', 'required'),
             array('id_proveedor', 'numerical', 'integerOnly'=>true),
             array('nombre_proveedor, empresa_proveedor', 'length', 'max'=>50),
             array('telefono', 'length', 'max'=>30),

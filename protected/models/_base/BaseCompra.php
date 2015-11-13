@@ -16,8 +16,8 @@
  * @property string $fecha_compra
  * @property string $observaciones
  *
- * @property Proveedor $idProveedor
  * @property Usuario $idUsuario
+ * @property Proveedor $idProveedor
  * @property DetalleCompra[] $detalleCompras
  */
 abstract class BaseCompra extends AweActiveRecord {
@@ -31,15 +31,16 @@ abstract class BaseCompra extends AweActiveRecord {
     }
 
     public static function representingColumn() {
-        return 'id_compra';
+        return 'fecha_compra';
     }
 
     public function rules() {
         return array(
-            // array('id_compra', 'required'),
+            array('id_compra', 'required'),
             array('id_compra, id_proveedor, id_usuario', 'numerical', 'integerOnly'=>true),
             array('total_compra', 'numerical'),
-            array('fecha_compra, observaciones', 'safe'),
+            array('observaciones', 'length', 'max'=>255),
+            array('fecha_compra', 'safe'),
             array('id_proveedor, id_usuario, total_compra, fecha_compra, observaciones', 'default', 'setOnEmpty' => true, 'value' => null),
             array('id_compra, id_proveedor, id_usuario, total_compra, fecha_compra, observaciones', 'safe', 'on'=>'search'),
         );
@@ -47,8 +48,8 @@ abstract class BaseCompra extends AweActiveRecord {
 
     public function relations() {
         return array(
-            'idProveedor' => array(self::BELONGS_TO, 'Proveedor', 'id_proveedor'),
             'idUsuario' => array(self::BELONGS_TO, 'Usuario', 'id_usuario'),
+            'idProveedor' => array(self::BELONGS_TO, 'Proveedor', 'id_proveedor'),
             'detalleCompras' => array(self::HAS_MANY, 'DetalleCompra', 'id_compra'),
         );
     }
@@ -64,8 +65,8 @@ abstract class BaseCompra extends AweActiveRecord {
                 'total_compra' => Yii::t('app', 'Total Compra'),
                 'fecha_compra' => Yii::t('app', 'Fecha Compra'),
                 'observaciones' => Yii::t('app', 'Observaciones'),
-                'idProveedor' => null,
                 'idUsuario' => null,
+                'idProveedor' => null,
                 'detalleCompras' => null,
         );
     }
