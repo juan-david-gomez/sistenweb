@@ -1976,6 +1976,7 @@ in D:\Uwamp_Myse\www\sistenweb\sistenweb\index.php (13)
 in D:\Uwamp_Myse\www\sistenweb\sistenweb\index.php (13)
 2015/11/13 00:01:30 [warning] [application] Error al establecer unsafe al atributo "layout" de "AweCrudCode".
 in D:\Uwamp_Myse\www\sistenweb\sistenweb\index.php (13)
+<<<<<<< HEAD
 2015/11/13 07:52:32 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in D:\Uwamp_Myse\www\sistenweb\sistenweb\framework\web\auth\CAccessControlFilter.php:182
 Stack trace:
 #0 D:\Uwamp_Myse\www\sistenweb\sistenweb\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
@@ -2086,3 +2087,5 @@ Stack trace:
 REQUEST_URI=/sistenweb/sistenweb/index.php?r=SistenAdmin
 HTTP_REFERER=http://localhost:8000/sistenweb/sistenweb/
 ---
+=======
+>>>>>>> 88ac25eaf56a344cc4ce36d6dcd5ce7b6669ac07
