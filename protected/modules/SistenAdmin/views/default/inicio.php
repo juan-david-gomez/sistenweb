@@ -24,7 +24,7 @@
  -->
 
 			<div class="row-fluid">	
-				<a href="<?php echo Yii::app()->createUrl('SistenAdmin/default/admin');?>" class="quick-button metro red span2 offset1">
+				<a href="<?php echo Yii::app()->createUrl('SistenAdmin/default/admin');?>" class="quick-button metro red span2">
 					<i class="icon-dashboard"></i><p class="hidden-tablet"> Inicio</p>
 				</a>
 				<a href="<?php echo Yii::app()->createUrl('SistenAdmin/producto/admin');?>" class="quick-button metro blue span2">

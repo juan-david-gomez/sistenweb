@@ -47,7 +47,7 @@
 	<div class="navbar">
 		<div class="navbar-inner">
 			<div class="container-fluid">
-				<a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse">
+				<a  class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -84,7 +84,7 @@
 				
 			<!-- start: Main Menu -->
 			<div id="sidebar-left" class="span2">
-				<div class="nav-collapse sidebar-nav">
+				<div class="nav-collapse sidebar-nav collapse">
 					<ul class="nav nav-tabs nav-stacked main-menu">
 						<li><a href="<?php echo Yii::app()->createUrl('SistenAdmin/default/admin');?>"><i class="icon-dashboard"></i><span class="hidden-tablet"> Inicio</span></a></li>	
 						<li><a href="<?php echo Yii::app()->createUrl('SistenAdmin/producto/admin');?>"><i class="icon-barcode"></i><span class="hidden-tablet"> Productos</span></a></li>
@@ -174,7 +174,7 @@
 
 	</footer>
 	
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
 	      <div class="modal-header">
