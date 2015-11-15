@@ -16,7 +16,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
-		'ext.aweCrud.components.*',
+		'ext.AweCrud.components.*',
 	),
 
 	'modules'=>array(
@@ -66,7 +66,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=sistenweb',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => 'root',
+			'password' => '',
 			'charset' => 'utf8',
 		),
 		// uncomment the following to use a MySQL database
