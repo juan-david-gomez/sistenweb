@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 2015/05/23 14:08:43 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. (D:\UwAmp\www\sistenweb\sistenweb\protected\views\layouts\main.php:51)
 Stack trace:
 #0 D:\UwAmp\www\sistenweb\framework\web\CBaseController.php(95): SiteController->renderInternal()
@@ -1976,3 +1978,4 @@ in D:\Uwamp_Myse\www\sistenweb\sistenweb\index.php (13)
 in D:\Uwamp_Myse\www\sistenweb\sistenweb\index.php (13)
 2015/11/13 00:01:30 [warning] [application] Error al establecer unsafe al atributo "layout" de "AweCrudCode".
 in D:\Uwamp_Myse\www\sistenweb\sistenweb\index.php (13)
+>>>>>>> 88ac25eaf56a344cc4ce36d6dcd5ce7b6669ac07
