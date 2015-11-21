@@ -14,7 +14,7 @@ class DetalleCompra extends BaseDetalleCompra
 
     public static function label($n = 1)
     {
-        return Yii::t('app', 'DetalleCompra|DetalleCompras', $n);
+        return Yii::t('app', 'Detalle Compra|Detalle Compras', $n);
     }
 
 }

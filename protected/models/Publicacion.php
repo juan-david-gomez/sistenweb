@@ -14,7 +14,7 @@ class Publicacion extends BasePublicacion
 
     public static function label($n = 1)
     {
-        return Yii::t('app', 'Publicacion|Publicacions', $n);
+        return Yii::t('app', 'Publicacion|Publicaciones', $n);
     }
 
 }

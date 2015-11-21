@@ -8,7 +8,7 @@ date_default_timezone_set("America/Bogota");
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'SistenWeb',
-	'language'=>'Es',
+	'language'=>'es',
 	// preloading 'log' component
 	'preload'=>array('log','bootstrap'),
 	'theme'=>'chame_blue',
@@ -26,12 +26,13 @@ return array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'123',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
-			'ipFilters'=>array('127.0.0.1','::1'),
+			'ipFilters'=>array('127.0.0.1','*'),
 			'generatorPaths' => array(
             	'ext.AweCrud.generators', // AweCrud generators
         	),
 		),
 		'SistenAdmin',
+		'SistenWeb',
 		
 	),
 

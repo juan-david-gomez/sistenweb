@@ -10,8 +10,8 @@
     )); ?>
 
     <p class="note">
-        <?php echo Yii::t('AweCrud.app', 'Fields with') ?> <span class="required">*</span>
-        <?php echo Yii::t('AweCrud.app', 'are required') ?>.    </p>
+        Los campos con <span class="required">*</span>
+        son requeridos  </p>
 
     <?php echo $form->errorSummary($model) ?>
 

@@ -9,7 +9,7 @@ $this->pageTitle=Yii::app()->name;
 	    	<div class="span3 offset1" style="background-color:white;padding:10px;">
 				<img src="<?php echo Yii::app()->theme->baseUrl;?>/img/logo_cliente.png"  style='height:200px' alt="">
 				<br>
-				<a href="#" class="btn btn-primary">Publicar Tienda</a>
+				<a href="<?php echo Yii::app()->createUrl('SistenWeb/inicio');?>" class="btn btn-primary">Publicar Tienda</a>
 	    	</div>
 
 	    	 <div class="span4">
@@ -19,7 +19,7 @@ $this->pageTitle=Yii::app()->name;
 	    	<div class="span3" style="background-color:white;padding:10px;">
 				<img src="<?php echo Yii::app()->theme->baseUrl;?>/img/logo_tendero.png" style='height:200px;' alt="">
 					<br>
-				<a href="<?php echo Yii::app()->createUrl('SistenAdmin');?>" class="btn btn-primary">Administrar Tienda</a>
+				<a href="<?php echo Yii::app()->createUrl('SistenAdmin/default/admin');?>" class="btn btn-primary">Administrar Tienda</a>
 	    	</div>
 	  </div><!-- /.row -->
 	</div>
@@ -43,7 +43,7 @@ $this->pageTitle=Yii::app()->name;
 	                    	<li>Ver detalle de los productos de su interes</li>
 	                    	<li>Ver la ubicación de la tienda y su contacto</li>
 	                    </ul></p>
-	                    <p><a href="#" class="btn btn-primary">Buscar un Producto</a></p>
+	                    <p><a href="<?php echo Yii::app()->createUrl('SistenWeb/inicio');?>" class="btn btn-primary">Buscar un Producto</a></p>
 	                  </div>
 	                </div>
 	              </li>
@@ -62,7 +62,7 @@ $this->pageTitle=Yii::app()->name;
 		                    	<li>Ver la ubicación de la tienda y su contacto</li>
 	                    	</ul>	
 	                	</p>
-	                    <p><a href="#" class="btn btn-primary">Administrar una Tienda</a></p>
+	                    <p><a href="<?php echo Yii::app()->createUrl('SistenAdmin/default/admin');?>" class="btn btn-primary">Administrar una Tienda</a></p>
 	                  </div>
 	                </div>
 	              </li>

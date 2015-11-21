@@ -14,7 +14,7 @@ class Proveedor extends BaseProveedor
 
     public static function label($n = 1)
     {
-        return Yii::t('app', 'Proveedor|Proveedors', $n);
+        return Yii::t('app', 'Proveedor|Proveedores', $n);
     }
 
 }
